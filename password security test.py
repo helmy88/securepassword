@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import secrets
 import string
 
@@ -48,7 +49,7 @@ def get_yes_no_input(prompt):
         else:
             print("Incorrect input. Please enter 'y' for yes or 'n' for no.")
 
-if __name__ == "__main__":
+def main():
     print("Welcome to the Password Generator!")
     length = int(input("Enter password length: "))
     use_uppercase = get_yes_no_input("Include uppercase letters? (y/n): ")
@@ -58,3 +59,6 @@ if __name__ == "__main__":
 
     password = generate_password(length, use_uppercase, use_lowercase, use_digits, use_symbols)
     print("Generated Password:", password)
+
+if __name__ == "__main__":
+    main()
